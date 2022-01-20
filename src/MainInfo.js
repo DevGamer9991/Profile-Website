@@ -29,6 +29,7 @@ const MainText = styled.h1`
         font-size: 65px;
         background: linear-gradient(to right, var(--primary), var(--secondary));
         -webkit-background-clip: text;
+        background-clip: text;
         -webkit-text-fill-color: transparent;
     }
 `;
