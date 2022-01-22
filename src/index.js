@@ -2,9 +2,10 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import styled from 'styled-components';
 
-import Navbar from './Navbar';
-import MainInfo from './MainInfo';
-import Footer from "./Footer";
+import Navbar from './Home_Components/Navbar';
+import MainInfo from './Home_Components/MainInfo';
+import Footer from "./Home_Components/Footer";
+import ProgramingCards from './Home_Components/Programming_Cards/ProgramingCards';
 
 export const MainWrapper = styled.div``;
 export const MainContent = styled.div`
@@ -21,6 +22,7 @@ function App() {
       <Navbar />
       <MainContent>
         <MainInfo />
+        <ProgramingCards />
         <Footer />
       </MainContent>
     </MainWrapper>

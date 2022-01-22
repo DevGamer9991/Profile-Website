@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from "styled-components";
 
-import Logo from "./graphics/Logo.svg";
+import Logo from "../graphics/Logo.svg";
 
 // Navbar
 export const NavbarWrapper = styled.header`

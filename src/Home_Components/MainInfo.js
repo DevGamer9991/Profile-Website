@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import styled from 'styled-components';
 
-import BlobBG from "./graphics/BlobBG.svg";
+import BlobBG from "../graphics/BlobBG.svg";
 
 var Info = ["Programmer", "Developer", "IT Profesional"];
 
