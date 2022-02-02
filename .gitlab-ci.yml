@@ -1,0 +1,24 @@
+stages:
+    - build
+    - deploy
+
+build:
+    stage: build
+    image: node:14.18.3
+    script:
+        - npm install
+        - npm run build
+    artifacts:
+        paths:
+            - "buid/*"
+
+deploy:
+    stage: deploy
+    image: "docker:20.10.12"
+    dependencies:
+        - build
+    script:
+        - mv build/* server/Site/.
+        - docker build -it parker-website
+        - docker rm parker-website
+        - docker run -it -d -p 8181:80 --name parker-website parker-website
