@@ -1,6 +1,6 @@
 stages:
     - build
-    - test
+    - deplo
 
 build:
     stage: build
@@ -13,23 +13,13 @@ build:
         paths:
             - "build/*"
 
-test:
-    stage: test
-    artifacts:
-        paths:
-            - file.txt
-    image: "docker:20.10.12"
-    dependencies:
-        - build
-    script:
-        - ls | tee file.txt
-
 deploy:
+    stage: deploy
     image: "docker:20.10.12"
     dependencies:
         - build
     script:
-        - cp build/* server/Site/
+        - cp build/* ./server/Site/*
         - docker build -it parker-website
         - docker rm parker-website
         - docker run -it -d -p 8181:80 --name parker-website parker-website
