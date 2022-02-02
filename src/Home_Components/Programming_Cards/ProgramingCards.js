@@ -40,9 +40,6 @@ const CardWrapper = styled.div`
 `;
 
 const ProgramingCards = () => {
-
-    const list = ["Hi", "Hi", "i"]
-
     return (
         <Main>
             <Title>The Languages I Know</Title>

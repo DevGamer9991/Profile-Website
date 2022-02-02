@@ -13,12 +13,7 @@ const Footer = () => {
         <Main>
             <h3>Parker Thornton</h3>
             <div>
-                <a>About Me</a>
-                <a>About Me</a>
-                <a>About Me</a>
-                <a>About Me</a>
-                <a>About Me</a>
-                <a>About Me</a>
+                Test
             </div>
         </Main>
     );

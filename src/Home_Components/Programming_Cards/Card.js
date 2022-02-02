@@ -25,11 +25,7 @@ const Title = styled.h2``;
 const List = styled.div`
 `;
 
-const Test = styled.p`color: black;`;
-
 const Card = (props) => {
-    var list = props.list;
-
     return (
         <Main>
             <Title>{props.title}</Title>

@@ -2,6 +2,10 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import styled from 'styled-components';
 
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+
+import Contact from './Contact';
+
 import Navbar from './Home_Components/Navbar';
 import MainInfo from './Home_Components/MainInfo';
 import Footer from "./Home_Components/Footer";
@@ -20,7 +24,6 @@ export const MainContent = styled.div`
 function App() {
   return (
     <MainWrapper>
-      <Navbar />
       <MainContent>
         <MainInfo />
         <ProgramingCards />
@@ -32,8 +35,12 @@ function App() {
 }
 
 ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
+  <BrowserRouter>
+    <Navbar />
+    <Routes>
+      <Route exact path="/contact" element={<Contact />} />
+      <Route exact path="/*" element={<App />} />
+    </Routes>
+  </BrowserRouter>,
   document.getElementById('root')
 );

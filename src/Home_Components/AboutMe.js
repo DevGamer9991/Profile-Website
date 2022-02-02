@@ -1,12 +1,10 @@
 import React from 'react';
-import styled from 'styled-components';
-
-
 
 const AboutMe = () => {
     return (
-        <div>
-            Hi
+        <div id="about-me">
+            <h1>About Me</h1>
+            <p></p>
         </div>
     );
 };

@@ -1,9 +1,7 @@
-import React, { useState } from 'react';
+import React from 'react';
 import styled from 'styled-components';
 
 import BlobBG from "../graphics/BlobBG.svg";
-
-var Info = ["Programmer", "Developer", "IT Profesional"];
 
 const Main = styled.div`
     display: flex;
@@ -100,17 +98,14 @@ const LineButton = styled.a`
 `;
 
 const MainInfo = () => {
-
-    var value = Info[Math.floor(Math.random() * Info.length)];
-
     return (
         <Main>
             <MainTextWrapper>
                 <MainText>Hi, My Name is <br></br><strong>Parker Thornton</strong></MainText>
                 <SecondaryText>And I Am a Self Taught <strong>Programmer</strong> and <strong>Software Developer</strong></SecondaryText>
                 <ButtonWrapper>
-                    <SolidButton href="/contact">Contact Me</SolidButton>
-                    <LineButton href="/test">Test</LineButton>
+                    <SolidButton href="#about-me">About Me</SolidButton>
+                    <LineButton href="/contact">Contact Me</LineButton>
                 </ButtonWrapper>
             </MainTextWrapper>
             <Blob src={BlobBG} />
