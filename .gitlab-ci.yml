@@ -18,6 +18,7 @@ deploy:
     image: "docker:20.10.12"
     dependencies:
         - build
+    allow_failure: true
     script:
         - ls server
         - cp -R build/* ./server/Site
