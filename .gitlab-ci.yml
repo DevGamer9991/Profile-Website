@@ -1,6 +1,6 @@
 stages:
     - build
-    - deploy
+    - test
 
 build:
     stage: build
@@ -13,8 +13,18 @@ build:
         paths:
             - "build/*"
 
+test:
+    stage: test
+    artifacts:
+        paths:
+            - file.txt
+    image: "docker:20.10.12"
+    dependencies:
+        - build
+    script:
+        - ls | tee file.txt
+
 deploy:
-    stage: deploy
     image: "docker:20.10.12"
     dependencies:
         - build
