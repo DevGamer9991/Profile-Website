@@ -6,6 +6,7 @@ import Navbar from './Home_Components/Navbar';
 import MainInfo from './Home_Components/MainInfo';
 import Footer from "./Home_Components/Footer";
 import ProgramingCards from './Home_Components/Programming_Cards/ProgramingCards';
+import AboutMe from './Home_Components/AboutMe';
 
 export const MainWrapper = styled.div``;
 export const MainContent = styled.div`
@@ -23,6 +24,7 @@ function App() {
       <MainContent>
         <MainInfo />
         <ProgramingCards />
+        <AboutMe />
         <Footer />
       </MainContent>
     </MainWrapper>

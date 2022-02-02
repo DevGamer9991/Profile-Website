@@ -48,6 +48,7 @@ export const NavItem = styled.a`
     width: fit-content;
     font-size: 22px;
     margin-inline: 30px;
+    cursor: pointer;
 `;
 
 export const NavButton = styled.button`
@@ -60,6 +61,11 @@ export const NavButton = styled.button`
     color: white;
     font-weight: bold;
     font-size: 17px;
+    cursor: pointer;
+
+    :hover {
+        background-color: var(--primary-hover);
+    }
 `;
 
 const Navbar = () => {
