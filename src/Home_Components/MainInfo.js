@@ -9,10 +9,20 @@ const Main = styled.div`
     flex-direction: row;
     height: calc(100vh - 90px);
     position: relative;
+
+    @media screen and (max-width: 500px) {
+        flex-direction: column;
+        top: 90px;
+
+        >img {
+            display: none;
+        }
+    }
 `;
 
 const Blob = styled.img`
-    width: 44%;
+    width: 100%;
+    max-width: 800px;
     position: absolute;
     top: 0;
     right: 0;
@@ -20,31 +30,44 @@ const Blob = styled.img`
 
 const MainTextWrapper = styled.div`
     margin-left: 200px;
-    width: 800px;
+    max-width: 800px;
+    width: 100%;
     display: flex;
     justify-content: center;
     flex-direction: column;
     transform: translateY(-90px);
+
+    @media screen and (max-width: 500px) {
+        margin: 0;
+    }
 `;
 
 const MainText = styled.h1`
-    font-size: 65px;
+    font-size: 3vw;
     font-weight: normal;
     margin: 0;
     margin-bottom: 15px;
     /* background: red; */
 
     strong {
-        font-size: 75px;
+        font-size: 4vw;
         background: linear-gradient(to right, var(--primary), var(--secondary));
         -webkit-background-clip: text;
         background-clip: text;
         -webkit-text-fill-color: transparent;
     }
+
+    @media screen and (max-width: 500px) {
+        font-size: calc(65px / 2);
+
+        strong {
+            font-size: calc(75px / 2);
+        }
+    }
 `;
 
 const SecondaryText = styled.p`
-    font-size: 20px;
+    font-size: 1vw;
     margin: 0;
     margin-top: 10px;
     padding-left: 5px;
@@ -52,6 +75,10 @@ const SecondaryText = styled.p`
     /* background: red; */
     strong {
         color: var(--primary)
+    }
+
+    @media screen and (max-width: 500px) {
+        font-size: calc(20px / 2);
     }
 `;
 

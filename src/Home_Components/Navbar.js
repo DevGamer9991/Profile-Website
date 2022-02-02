@@ -57,6 +57,10 @@ export const NavItem = styled.a`
     :hover {
         color: var(--secondary-hover);
     }
+
+    @media screen and (max-width: 500px) {
+        display: none;
+    }
 `;
 
 export const NavButton = styled.a`
@@ -77,12 +81,68 @@ export const NavButton = styled.a`
     :hover {
         background-color: var(--primary-hover);
     }
+
+    @media screen and (max-width: 500px) {
+        display: none;
+    }
+`;
+
+const HamburgerButton = styled.div`
+    display: none;
+
+    @media screen and (max-width: 500px) {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        width: fit-content;
+        height: fit-content;
+
+        margin-right: 20px;
+    }
+`;
+
+const Line = styled.span`
+    width: 30px;
+    height: 4px;
+    margin-top: 2px;
+    margin-bottom: 3px;
+    background-color: black;
+    color: transparent;
+`;
+
+const HamburgerMenu = styled.div`
+    height: calc(100vh - 90px);
+    width: 100vw;
+    background: red;
+    position: absolute;
+    top: 90px;
+    left: -100%;
+    right: 0;
+    bottom: 0;
+
+    transition: left 0.25s ease-in-out;
 `;
 
 const Navbar = () => {
 
+    var hamMenu = React.createRef();
+
+    var hamShown = false;
+
     const clickLogo = () => {
         window.location.href = "/";
+    }
+
+    const openHamburgerMenu = () => {
+        if (!hamShown) {
+            hamMenu.current.style.left = "0";
+            document.body.style.overflowY = "hidden";
+            hamShown = true;
+        } else {
+            hamMenu.current.style.left = "-100%";
+            document.body.style.overflowY = "scroll";
+            hamShown = false;
+        }
     }
 
     return (
@@ -94,7 +154,15 @@ const Navbar = () => {
             <NavItemWrapper>
                 <NavItem href="#about-me">About Me</NavItem>
                 <NavButton href="/contact">Contact Me</NavButton>
+                <HamburgerButton onClick={openHamburgerMenu}>
+                    <Line>.</Line>
+                    <Line>.</Line>
+                    <Line>.</Line>
+                </HamburgerButton>
             </NavItemWrapper>
+            <HamburgerMenu ref={hamMenu}>
+                Hi
+            </HamburgerMenu>
         </NavbarWrapper>
     );
 };

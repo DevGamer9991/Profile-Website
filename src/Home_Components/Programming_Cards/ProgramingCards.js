@@ -37,6 +37,10 @@ const CardWrapper = styled.div`
     justify-content: space-evenly;
     height: 100%;
     transform: translateY(35px);
+
+    @media screen and (max-width: 500px) {
+        flex-direction: column;
+    }
 `;
 
 const ProgramingCards = () => {
