@@ -21,6 +21,6 @@ deploy:
     script:
         - ls server
         - cp -R build/* ./server/Site
-        - docker build -t parker-website
+        - docker build -t parker-website .
         - docker rm parker-website
         - docker run -it -d -p 8181:80 --name parker-website parker-website
