@@ -1,7 +1,7 @@
 const express = require("express");
 const path = require("path");
 
-var port = 5010;
+var port = 80;
 
 var app = express();
 
