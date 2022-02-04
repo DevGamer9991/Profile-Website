@@ -40,7 +40,6 @@ const MainTextWrapper = styled.div`
     @media screen and (max-width: 500px) {
         margin: 0;
         width: 100vw;
-        background: red;
 
         justify-content: center;
         align-items: center;
@@ -123,7 +122,7 @@ const LineButton = styled.a`
     color: black;
     font-weight: normal;
 
-    :hover {
+    :hover, :focus {
         background-color: var(--secondary-hover);
         color: white;
     }

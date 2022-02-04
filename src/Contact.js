@@ -12,8 +12,8 @@ const MainContent = styled.div`
 `;
 
 const MainBox = styled.div`
-    width: 100%;
-    height: 100%;
+    width: calc(100% - 20px);
+    height: calc(100% - 20px);
     max-width: 900px;
     max-height: 600px;
     background: white;

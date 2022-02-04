@@ -45,7 +45,7 @@ const CardWrapper = styled.div`
 
 const ProgramingCards = () => {
     return (
-        <Main>
+        <Main id="my-languages">
             <Title>The Languages I Know</Title>
             <CardWrapper>
                 <Card title="Frontend Web Development">
@@ -71,7 +71,5 @@ const ProgramingCards = () => {
         </Main>
     );
 };
-
-ProgramingCards.propTypes = {};
 
 export default ProgramingCards;

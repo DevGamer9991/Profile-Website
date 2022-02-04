@@ -13,7 +13,7 @@ const Main = styled.div`
     box-shadow: 5px 5px 10px rgba(100, 100, 100, 50%);
     transition: all 0.25s ease-in-out;
 
-    :hover {
+    :hover, :focus {
         background: white;
         box-shadow: 10px 10px 10px rgba(100, 100, 100, 50%);
         transform: translate(0px, -5px);
@@ -24,7 +24,7 @@ const Main = styled.div`
         width: 100%;
         border-radius: 0;
 
-        :hover {
+        :hover, :focus {
             background: #EDEDED;
             box-shadow: 5px 5px 10px rgba(100, 100, 100, 50%);
             transform: translate(0px);

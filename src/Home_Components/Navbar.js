@@ -54,7 +54,7 @@ export const NavItem = styled.a`
     color: black;
     text-decoration: none;
 
-    :hover {
+    :hover, :focus {
         color: var(--secondary-hover);
     }
 
@@ -78,7 +78,7 @@ export const NavButton = styled.a`
     display: grid;
     place-items: center;
 
-    :hover {
+    :hover, :focus {
         background-color: var(--primary-hover);
     }
 
@@ -113,7 +113,7 @@ const Line = styled.span`
 const HamburgerMenu = styled.div`
     height: calc(100vh - 90px);
     width: 100vw;
-    background: red;
+    background: white;
     position: absolute;
     top: 90px;
     left: -100%;
@@ -121,6 +121,44 @@ const HamburgerMenu = styled.div`
     bottom: 0;
 
     transition: left 0.25s ease-in-out;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+`;
+
+const MenuItem = styled.a`
+    width: fit-content;
+    margin-block: 20px;
+    display: grid;
+    text-align: center;
+    text-decoration: none;
+    color: black;
+    font-size: 30px;
+
+    :hover, :focus {
+        color: var(--secondary-hover);
+    }
+`;
+
+export const MenuButton = styled.a`
+    height: 50px;
+    width: 80vw;
+    border-radius: 35px;
+    border: none;
+    outline: none;
+    background: var(--primary);
+    color: white;
+    font-weight: bold;
+    font-size: 25px;
+    cursor: pointer;
+    text-decoration: none;
+    display: grid;
+    place-items: center;
+    margin-block: 20px;
+
+    :hover, :focus {
+        background-color: var(--primary-hover);
+    }
 `;
 
 const Navbar = () => {
@@ -145,6 +183,18 @@ const Navbar = () => {
         }
     }
 
+    const MenuItemClick = () => {
+        if (!hamShown) {
+            hamMenu.current.style.left = "0";
+            document.body.style.overflowY = "hidden";
+            hamShown = true;
+        } else {
+            hamMenu.current.style.left = "-100%";
+            document.body.style.overflowY = "scroll";
+            hamShown = false;
+        }
+    }
+
     return (
         <NavbarWrapper>
             <LogoWrapper onClick={clickLogo}>
@@ -153,6 +203,7 @@ const Navbar = () => {
             </LogoWrapper>
             <NavItemWrapper>
                 <NavItem href="#about-me">About Me</NavItem>
+                <NavItem href="#my-languages">About Me</NavItem>
                 <NavButton href="/contact">Contact Me</NavButton>
                 <HamburgerButton onClick={openHamburgerMenu}>
                     <Line>.</Line>
@@ -161,7 +212,9 @@ const Navbar = () => {
                 </HamburgerButton>
             </NavItemWrapper>
             <HamburgerMenu ref={hamMenu}>
-                Hi
+                <MenuItem onClick={MenuItemClick} href="#my-languages">My Languages</MenuItem>
+                <MenuItem onClick={MenuItemClick} href="#about-me">About Me</MenuItem>
+                <MenuButton href="/contact">Contact Me</MenuButton>
             </HamburgerMenu>
         </NavbarWrapper>
     );
