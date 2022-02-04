@@ -39,6 +39,11 @@ const MainTextWrapper = styled.div`
 
     @media screen and (max-width: 500px) {
         margin: 0;
+        width: 100vw;
+        background: red;
+
+        justify-content: center;
+        align-items: center;
     }
 `;
 

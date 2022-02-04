@@ -18,6 +18,29 @@ const Main = styled.div`
         box-shadow: 10px 10px 10px rgba(100, 100, 100, 50%);
         transform: translate(0px, -5px);
     }
+
+    @media screen and (max-width: 500px) {
+        height: 300px;
+        width: 100%;
+        border-radius: 0;
+
+        :hover {
+            background: #EDEDED;
+            box-shadow: 5px 5px 10px rgba(100, 100, 100, 50%);
+            transform: translate(0px);
+        }
+
+        div {
+
+            img {
+                width: 30px;
+            }
+
+            a {
+                font-size: 16px;
+            }
+        }
+    }
 `;
 
 const Title = styled.h2``;
