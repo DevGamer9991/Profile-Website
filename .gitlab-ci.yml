@@ -24,5 +24,4 @@ deploy:
         - cp -R build/* ./server/Site
         - docker build -t parker-website .
         - "docker stop parker-website || true && docker rm parker-website || true"
-        - docker run -it -d -p 8181:80 --restart=unless-stopped
- --name parker-website parker-website
+        - docker run -it -d -p 8181:80 --restart=unless-stopped --name parker-website parker-website
