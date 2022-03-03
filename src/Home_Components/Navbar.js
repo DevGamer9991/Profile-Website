@@ -116,7 +116,7 @@ const HamburgerMenu = styled.div`
     background: white;
     position: absolute;
     top: 90px;
-    left: -100%;
+    left: -120%;
     right: 0;
     bottom: 0;
 
@@ -177,7 +177,7 @@ const Navbar = () => {
             document.body.style.overflowY = "hidden";
             hamShown = true;
         } else {
-            hamMenu.current.style.left = "-100%";
+            hamMenu.current.style.left = "-120%";
             document.body.style.overflowY = "scroll";
             hamShown = false;
         }
@@ -189,7 +189,7 @@ const Navbar = () => {
             document.body.style.overflowY = "hidden";
             hamShown = true;
         } else {
-            hamMenu.current.style.left = "-100%";
+            hamMenu.current.style.left = "-120%";
             document.body.style.overflowY = "scroll";
             hamShown = false;
         }
