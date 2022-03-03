@@ -1,13 +1,15 @@
-FROM node:14.18.3
+FROM node:16.14.0
 
 WORKDIR /app
 
-COPY server/package*.json ./
+COPY package*.json /app/
 
 RUN npm install
 
-COPY server/. .
+RUN mkdir ./Site/
+
+COPY build/. /app/Site/.
 
 EXPOSE 80
 
-CMD npm run start
+CMD [ "npx", "serve", "-s", "Site", "-p", "80" ]
