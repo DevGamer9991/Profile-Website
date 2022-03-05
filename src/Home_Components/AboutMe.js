@@ -1,7 +1,9 @@
 import React from 'react';
 import styled from "styled-components";
 
-const Main = styled.div``;
+const Main = styled.div`
+    padding: 10px;
+`;
 
 const Title = styled.h1``;
 
