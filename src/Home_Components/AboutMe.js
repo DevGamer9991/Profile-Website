@@ -1,13 +1,18 @@
 import React from 'react';
 import styled from "styled-components";
+import { mainTextColor } from '../config';
 
 const Main = styled.div`
     padding: 10px;
 `;
 
-const Title = styled.h1``;
+const Title = styled.h1`
+    color: ${mainTextColor};
+`;
 
-const Subtext = styled.p``;
+const Subtext = styled.p`
+    color: ${mainTextColor};
+`;
 
 const AboutMe = () => {
     return (

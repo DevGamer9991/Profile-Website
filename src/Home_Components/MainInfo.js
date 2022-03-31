@@ -1,6 +1,8 @@
 import React from 'react';
 import styled from 'styled-components';
 
+import { mainTextColor, backgroundColor, secondaryBackgroundColor } from '../config';
+
 import BlobBG from "../graphics/BlobBG.svg";
 
 const Main = styled.div`
@@ -22,9 +24,9 @@ const Main = styled.div`
 
 const Blob = styled.img`
     width: 100%;
-    max-width: 700px;
+    max-width: 750px;
     position: absolute;
-    top: 0;
+    top: -90px;
     right: 0;
 `;
 
@@ -51,6 +53,7 @@ const MainText = styled.h1`
     font-weight: normal;
     margin: 0;
     margin-bottom: 15px;
+    color: ${mainTextColor};
     /* background: red; */
 
     strong {
@@ -75,6 +78,7 @@ const SecondaryText = styled.p`
     margin: 0;
     margin-top: 10px;
     padding-left: 5px;
+    color: ${mainTextColor};
 
     /* background: red; */
     strong {
@@ -119,7 +123,7 @@ const LineButton = styled.a`
     display: grid;
     place-items: center;
     text-decoration: none;
-    color: black;
+    color: ${mainTextColor};
     font-weight: normal;
 
     :hover, :focus {

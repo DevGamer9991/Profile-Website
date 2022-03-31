@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from "styled-components";
+import { mainTextColor } from '../config';
 
 const Main = styled.div`
     display: flex;
@@ -9,7 +10,7 @@ const Main = styled.div`
 `;
 
 const Title = styled.h1`
-    color: black;
+    color: ${mainTextColor};
 `;
 
 const Copywrite = styled.p`

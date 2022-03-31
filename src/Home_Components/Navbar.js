@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from "styled-components";
+import { backgroundColor, mainTextColor, secondaryBackgroundColor } from '../config';
 
 import Logo from "../graphics/Logo.svg";
 
@@ -15,9 +16,12 @@ export const NavbarWrapper = styled.header`
     left: 0;
     right: 0;
 
+    background: transparent;
+
+    transition: all 0.25s ease-in-out;
+
     justify-content: space-between;
     z-index: 10;
-    background: white;
 `;
 
 export const LogoWrapper = styled.div`
@@ -35,6 +39,7 @@ export const LogoImg = styled.img`
 
 export const LogoLabel = styled.h1`
     margin-left: 10px;
+    color: ${mainTextColor};
 `;
 
 export const NavItemWrapper = styled.div`
@@ -51,7 +56,7 @@ export const NavItem = styled.a`
     margin-inline: 30px;
     cursor: pointer;
 
-    color: black;
+    color: ${mainTextColor};
     text-decoration: none;
 
     :hover, :focus {
@@ -106,14 +111,14 @@ const Line = styled.span`
     height: 4px;
     margin-top: 2px;
     margin-bottom: 3px;
-    background-color: black;
+    background-color: ${mainTextColor};
     color: transparent;
 `;
 
 const HamburgerMenu = styled.div`
     height: calc(100vh - 90px);
     width: 100vw;
-    background: white;
+    background: ${backgroundColor};
     position: absolute;
     top: 90px;
     left: -120%;
@@ -132,7 +137,7 @@ const MenuItem = styled.a`
     display: grid;
     text-align: center;
     text-decoration: none;
-    color: black;
+    color: ${mainTextColor};
     font-size: 30px;
 
     :hover, :focus {
@@ -164,12 +169,22 @@ export const MenuButton = styled.a`
 const Navbar = () => {
 
     var hamMenu = React.createRef();
+    var navbarWrapper = React.createRef();
 
     var hamShown = false;
 
     const clickLogo = () => {
         window.location.href = "/";
     }
+
+    window.onscroll = () => {
+        console.log(window.scrollY)
+        if (window.scrollY >= 12) {
+            navbarWrapper.current.style.background = secondaryBackgroundColor;
+        } else {
+            navbarWrapper.current.style.background = "transparent";
+        }
+    };
 
     const openHamburgerMenu = () => {
         if (!hamShown) {
@@ -196,7 +211,7 @@ const Navbar = () => {
     }
 
     return (
-        <NavbarWrapper>
+        <NavbarWrapper ref={navbarWrapper}>
             <LogoWrapper onClick={clickLogo}>
                 <LogoImg src={Logo} width="60px"/>
                 <LogoLabel>Thornton</LogoLabel>
