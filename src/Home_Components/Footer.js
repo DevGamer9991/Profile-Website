@@ -8,13 +8,19 @@ const Main = styled.div`
     height: 300px;
 `;
 
+const Title = styled.h1`
+    color: black;
+`;
+
+const Copywrite = styled.p`
+    color: #858585;
+`;
+
 const Footer = () => {
     return (
         <Main>
-            <h3>Parker Thornton</h3>
-            <div>
-                Test
-            </div>
+            <Title>Parker Thornton</Title>
+            <Copywrite>© {new Date().getFullYear()} Parker Thornton | All Rights Reserved</Copywrite>
         </Main>
     );
 };

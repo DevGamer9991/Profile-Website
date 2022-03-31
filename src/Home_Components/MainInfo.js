@@ -22,15 +22,15 @@ const Main = styled.div`
 
 const Blob = styled.img`
     width: 100%;
-    max-width: 800px;
+    max-width: 700px;
     position: absolute;
     top: 0;
     right: 0;
 `;
 
 const MainTextWrapper = styled.div`
-    margin-left: 200px;
-    max-width: 800px;
+    margin-left: 10%;
+    max-width: 600px;
     width: 100%;
     display: flex;
     justify-content: center;
