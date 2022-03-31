@@ -16,7 +16,7 @@ export const NavbarWrapper = styled.header`
     left: 0;
     right: 0;
 
-    background: transparent;
+    background: #2b2b2b9b;
 
     transition: all 0.25s ease-in-out;
 
