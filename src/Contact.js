@@ -10,6 +10,7 @@ const MainContent = styled.div`
   width: 100vw;
   height: calc(100vh - 90px);
   background: linear-gradient(to bottom right, var(--primary), var(--secondary));
+  overflow: hidden;
 `;
 
 const MainBox = styled.div`
