@@ -50,7 +50,6 @@ const MainTextWrapper = styled.div`
 
 const MainText = styled.h1`
     font-size: 3vw;
-    font-weight: normal;
     margin: 0;
     margin-bottom: 15px;
     color: ${mainTextColor};
@@ -106,7 +105,6 @@ const SolidButton = styled.a`
     place-items: center;
     text-decoration: none;
     color: white;
-    font-weight: bold;
     margin-right: 30px;
 
     :hover {
@@ -124,7 +122,6 @@ const LineButton = styled.a`
     place-items: center;
     text-decoration: none;
     color: ${mainTextColor};
-    font-weight: normal;
 
     :hover, :focus {
         background-color: var(--secondary-hover);

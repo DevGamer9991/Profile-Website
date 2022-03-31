@@ -76,7 +76,6 @@ export const NavButton = styled.a`
     outline: none;
     background: var(--primary);
     color: white;
-    font-weight: bold;
     font-size: 17px;
     cursor: pointer;
     text-decoration: none;
@@ -153,7 +152,6 @@ export const MenuButton = styled.a`
     outline: none;
     background: var(--primary);
     color: white;
-    font-weight: bold;
     font-size: 25px;
     cursor: pointer;
     text-decoration: none;
@@ -182,7 +180,7 @@ const Navbar = () => {
         if (window.scrollY >= 12) {
             navbarWrapper.current.style.background = secondaryBackgroundColor;
         } else {
-            navbarWrapper.current.style.background = "transparent";
+            navbarWrapper.current.style.background = "#2b2b2b9b";
         }
     };
 
@@ -217,8 +215,8 @@ const Navbar = () => {
                 <LogoLabel>Thornton</LogoLabel>
             </LogoWrapper>
             <NavItemWrapper>
-                <NavItem href="#about-me">About Me</NavItem>
-                <NavItem href="#my-languages">About Me</NavItem>
+                <NavItem href="/#my-languages">My Languages</NavItem>
+                <NavItem href="/#about-me">About Me</NavItem>
                 <NavButton href="/contact">Contact Me</NavButton>
                 <HamburgerButton onClick={openHamburgerMenu}>
                     <Line>.</Line>
