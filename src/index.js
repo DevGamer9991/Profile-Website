@@ -10,6 +10,7 @@ import Navbar from './Home_Components/Navbar';
 import MainInfo from './Home_Components/MainInfo';
 import Footer from "./Home_Components/Footer";
 import ProgramingCards from './Home_Components/Programming_Cards/ProgramingCards';
+import Bio from './Home_Components/Bio';
 import AboutMe from './Home_Components/AboutMe';
 
 export const MainWrapper = styled.div``;
@@ -28,6 +29,7 @@ function App() {
         <MainInfo />
         <ProgramingCards />
         <AboutMe />
+        <Bio />
         <Footer />
       </MainContent>
     </MainWrapper>

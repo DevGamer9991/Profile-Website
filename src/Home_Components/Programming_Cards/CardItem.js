@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import { mainTextColor } from '../../config';
 
 const Main = styled.div`
     display: flex;
@@ -16,7 +17,7 @@ const Image = styled.img`
 
 const Name = styled.a`
     font-size: 24px;
-    color: black;
+    color: ${mainTextColor};
     text-decoration: none;
 `;
 

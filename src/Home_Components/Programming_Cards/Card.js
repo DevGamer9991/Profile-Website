@@ -1,10 +1,13 @@
 import React from "react";
 import styled from "styled-components";
+import { mainTextColor, backgroundColor, secondaryBackgroundColor } from "../../config";
 
 const Main = styled.div`
     width: 400px;
     height: 500px;
-    background: #EDEDED;
+    /* background: #EDEDED; */
+    background-color: ${backgroundColor};
+    color: ${mainTextColor};
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -14,7 +17,7 @@ const Main = styled.div`
     transition: all 0.25s ease-in-out;
 
     :hover, :focus {
-        background: white;
+        background: ${secondaryBackgroundColor};
         box-shadow: 10px 10px 10px rgba(100, 100, 100, 50%);
         transform: translate(0px, -5px);
     }
