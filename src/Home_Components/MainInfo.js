@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 
-import { mainTextColor, backgroundColor, secondaryBackgroundColor } from '../config';
+import { mainTextColor } from '../config';
 
 import BlobBG from "../graphics/BlobBG.svg";
 
