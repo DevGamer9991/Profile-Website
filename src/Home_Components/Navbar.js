@@ -60,7 +60,7 @@ export const NavItem = styled.a`
     text-decoration: none;
 
     :hover, :focus {
-        color: var(--secondary-hover);
+        color: lightgrey;
     }
 
     @media screen and (max-width: 500px) {
