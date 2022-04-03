@@ -28,7 +28,7 @@ function App() {
       <MainContent>
         <MainInfo />
         <ProgramingCards />
-        <AboutMe />
+        {/* <AboutMe /> */}
         <Bio />
         <Footer />
       </MainContent>
