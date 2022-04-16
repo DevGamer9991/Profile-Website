@@ -136,7 +136,7 @@ const MainInfo = () => {
                 <MainText>Hi, My Name is <br></br><strong>Parker Thornton</strong></MainText>
                 <SecondaryText>And I Am a Self Taught <strong>Programmer</strong> and <strong>Software Developer</strong></SecondaryText>
                 <ButtonWrapper>
-                    <SolidButton href="#about-me">About Me</SolidButton>
+                    <SolidButton href="#bio">About Me</SolidButton>
                     <LineButton href="/contact">Contact Me</LineButton>
                 </ButtonWrapper>
             </MainTextWrapper>

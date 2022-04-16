@@ -216,7 +216,7 @@ const Navbar = () => {
             </LogoWrapper>
             <NavItemWrapper>
                 <NavItem href="/#my-languages">My Languages</NavItem>
-                <NavItem href="/#about-me">About Me</NavItem>
+                <NavItem href="/#bio">About Me</NavItem>
                 <NavButton href="/contact">Contact Me</NavButton>
                 <HamburgerButton onClick={openHamburgerMenu}>
                     <Line>.</Line>
@@ -226,7 +226,7 @@ const Navbar = () => {
             </NavItemWrapper>
             <HamburgerMenu ref={hamMenu}>
                 <MenuItem onClick={MenuItemClick} href="#my-languages">My Languages</MenuItem>
-                <MenuItem onClick={MenuItemClick} href="#about-me">About Me</MenuItem>
+                <MenuItem onClick={MenuItemClick} href="#bio">About Me</MenuItem>
                 <MenuButton href="/contact">Contact Me</MenuButton>
             </HamburgerMenu>
         </NavbarWrapper>
