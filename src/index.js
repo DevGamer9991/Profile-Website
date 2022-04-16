@@ -36,6 +36,7 @@ function App() {
   );
 }
 
+
 ReactDOM.render(
   <BrowserRouter>
     <Navbar />
