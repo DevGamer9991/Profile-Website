@@ -16,7 +16,7 @@ const Main = styled.div`
 `;
 
 const Wrapper = styled.div`
-    width: 100%;
+    width: 90%;
     max-width: 1500px;
     height: 100%;
     display: flex;
@@ -46,13 +46,14 @@ const ItemsWrapper = styled.div`
     flex-direction: row;
 `;
 
-const Item = styled.h2`
+const Item = styled.a`
     margin: 0;
     padding: 0;
     color: white;
     margin-left: 40px;
     font-size: 22px;
     cursor: pointer;
+    text-decoration: none;
 
     transition: all 0.25s ease-in-out;
 
@@ -78,9 +79,8 @@ const Navbar = () => {
             <Wrapper>
                 <Title>PARKER THORNTON</Title>
                 <ItemsWrapper>
-                    <Item>HOME</Item>
-                    <Item>LANGUAGES</Item>
-                    <Item>CONTACT</Item>
+                    <Item href="#home">HOME</Item>
+                    <Item href="#contact">CONTACT</Item>
                 </ItemsWrapper>
             </Wrapper>
         </Main>

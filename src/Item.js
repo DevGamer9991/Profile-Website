@@ -4,24 +4,28 @@ import styled from "styled-components";
 const Main = styled.div`
     height: 450px;
     display: flex;
-    flex-direction: row;
     overflow: hidden;
-    display: flex;
     background: ${ props => props.background ? props.background : "transparent" };
+    justify-content: center;
+`;
+
+const MainWrapper = styled.div`
+    width: 100%;
+    max-width: 1000px;
+    display: flex;
     flex-direction: ${ props => props.rightToLeft ? "row-reverse" : "row"};
 `;
 
 const TextWrapper = styled.div`
-    width: 50vw;
+    width: 50%;
     display: flex;
-    align-items: left;
+    align-items: center;
     justify-content: center;
     flex-direction: column;
-    padding-left: 200px;
 `;
 
 const ImageWrapper = styled.div`
-    width: 50vw;
+    width: 50%;
     display: grid;
     place-items: center;
     position: relative;
@@ -33,28 +37,32 @@ const Title = styled.h2`
     word-wrap: normal;
     font-size: 50px;
     color: ${ props => props.darkMode ? "white" : "black" };
+    width: 360px;
 `;
 
 const Desc = styled.p`
     word-wrap: normal; 
     color: ${ props => props.darkMode ? "white" : "black" };
+    width: 360px;
 `;
 
 const Image = styled.img`
-    height: calc(450px * 0.8);
+    height: 360px;
+    filter: drop-shadow(0px 15px 15px rgba(0,0,0, 0.15));
 `;
 
 const Item = (props) => {
     return (
-        <Main background={props.background} rightToLeft={props.rightToLeft}>
-            <TextWrapper>
-                <Title darkMode={props.darkMode}>{props.title}</Title>
-                <Desc darkMode={props.darkMode}>{props.desc}</Desc>
-            </TextWrapper>
-            <ImageWrapper>
-                <Image src={props.image} />    
-            </ImageWrapper>
-
+        <Main background={props.background}>
+            <MainWrapper rightToLeft={props.rightToLeft}>
+                <TextWrapper>
+                    <Title darkMode={props.darkMode}>{props.title}</Title>
+                    <Desc darkMode={props.darkMode}>{props.desc}</Desc>
+                </TextWrapper>
+                <ImageWrapper>
+                    <Image src={props.image} />    
+                </ImageWrapper>
+            </MainWrapper>
         </Main>
     )
 }

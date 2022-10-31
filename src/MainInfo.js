@@ -19,21 +19,24 @@ const Main = styled.div`
 
 const Wrapper = styled.div`
     height: 100%;
-    width: 50vw;
+    width: 100vw;
     display: flex;
     justify-content: center;
     flex-direction: column;
     position: relative;
+    align-items: flex-end;
+    padding-right: 100px;
 `;
 
 const Name = styled.h1`
-    font-size: 60px;
+    font-size: 50px;
     /* margin-bottom: 20px; */
     font-weight: 300;
     color: white;
     position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
+    text-align: center;
+    margin: 0;
+    padding: 0;
 `;
 
 const ImageWrapper = styled.div`
@@ -42,19 +45,28 @@ const ImageWrapper = styled.div`
     display: grid;
     place-items: center;
     >img {
-        width: calc(100vh * 0.5);
+        width: calc(100vh * 0.6);
+        /* transform: translateY(-5%);
+        animation: floater 20s infinite;
+        width: 500px;
+        height: 500px;
+
+        @keyframes floater {
+            0%{transform: translateY(-5%);}
+            50%{transform: translateY(5%);}
+        } */
     }
 `;
 
 const MainInfo = (props) => {
     return (
-        <Main>
+        <Main id="home">
             <Wrapper>
-                <Name>My Name is <br /><span style={{ fontWeight: 900 }}>Parker Thornton</span></Name>
+                <Name><span>My Name is </span><br /><span style={{ fontSize: 70, fontWeight: 900 }}>Parker Thornton</span></Name>
             </Wrapper>
-            <ImageWrapper>
-                <img src="images/computer.png"/>
-            </ImageWrapper>
+            {/* <ImageWrapper>
+                <img alt="Laptop Computer" src="images/computer.png"/>
+            </ImageWrapper> */}
         </Main>
     )
 }  
