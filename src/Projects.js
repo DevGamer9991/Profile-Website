@@ -1,0 +1,118 @@
+import React, { useEffect, useState } from "react";
+import styled from "styled-components";
+
+const Main = styled.div`
+    height: 340px;
+    background-color: teal;
+    width: 100%;
+    color: white;
+    position: relative;
+`;
+
+const Title = styled.h1`
+    height: 70px;
+    display: grid;
+    place-items: center;
+`;
+
+const ProjectsWrapper = styled.div`
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    position: relative;
+    max-width: 1000px;
+    left: 50%;
+    transform: translateX(-50%);
+`;
+
+const ProjectWrapper = styled.div`
+    width: 300px;
+    height: 100px;
+    background-color: red;
+    margin: 5px;
+`;
+
+const ProjectTitle = styled.a`
+    margin: 5px;
+`;
+
+const Projects = (props) => {
+
+    const [data, setData] = useState(null);
+    const [loading, setLoading] = useState(true);
+    const [error, setError] = useState(null);
+
+    useEffect(() => {
+        fetch(`https://api.github.com/users/DevGamer9991/repos`)
+        .then((response) => {
+            if (!response.ok) {
+                throw new Error(
+                `This is an HTTP error: The status is ${response.status}`
+                );
+            }
+            return response.json();
+        })
+        .then((actualData) => {
+            setData(actualData)
+            console.log(actualData)
+            setError(null);
+        })
+        .catch((err) => {
+            setError(err.message)
+            setData(null)
+        })
+        .finally(() => {
+            setLoading(false)
+        })
+    }, []);
+
+    return (
+        <Main id="projects">
+            <Title>Github Projects</Title>
+            {error && (
+                <div>{`There is a problem fetching the post data - ${error}`}</div>
+            )}
+            <ProjectsWrapper>
+                {data &&
+                    data.map(({ id, name, html_url }) => {
+                        return (
+                            <ProjectWrapper key={id}>
+                                <ProjectTitle href={html_url}>{name}</ProjectTitle>
+                            </ProjectWrapper>
+                        )
+                    })
+                }
+            </ProjectsWrapper>
+          {loading &&
+          <svg version="1.1" id="L4" style={{ position: "absolute", top: 0, width: "100%", height: 300 }} x="0px" y="0px" viewBox="0 0 100 100" enable-background="new 0 0 0 0">
+            <circle fill="#fff" stroke="none" cx="35%" cy="50" r="4">
+                <animate
+                attributeName="opacity"
+                dur="1s"
+                values="0;1;0"
+                repeatCount="indefinite"
+                begin="0.1"/>    
+            </circle>
+            <circle fill="#fff" stroke="none" cx="50%" cy="50" r="4">
+                <animate
+                attributeName="opacity"
+                dur="1s"
+                values="0;1;0"
+                repeatCount="indefinite" 
+                begin="0.2"/>       
+            </circle>
+            <circle fill="#fff" stroke="none" cx="65%" cy="50" r="4">
+                <animate
+                attributeName="opacity"
+                dur="1s"
+                values="0;1;0"
+                repeatCount="indefinite" 
+                begin="0.3"/>     
+            </circle>
+            </svg>
+            }
+        </Main>
+    )
+}
+
+export default Projects;

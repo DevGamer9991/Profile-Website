@@ -5,9 +5,8 @@ const Main = styled.div`
     position: absolute;
     top: 0;
     left: 0;
-    right: 0;
     height: 100vh;
-    /* width: 100vw; */
+    width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -19,13 +18,13 @@ const Main = styled.div`
 
 const Wrapper = styled.div`
     height: 100%;
-    width: 100vw;
+    /* width: 50vw; */
     display: flex;
     justify-content: center;
     flex-direction: column;
     position: relative;
     align-items: flex-end;
-    padding-right: 100px;
+    padding-right: 0px;
 `;
 
 const Name = styled.h1`
@@ -33,7 +32,7 @@ const Name = styled.h1`
     /* margin-bottom: 20px; */
     font-weight: 300;
     color: white;
-    position: absolute;
+    /* position: absolute; */
     text-align: center;
     margin: 0;
     padding: 0;

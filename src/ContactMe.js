@@ -1,7 +1,7 @@
 import React from "react"
 import styled from "styled-components"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faDiscord, faInstagram, faFacebook, faYoutube } from "@fortawesome/free-brands-svg-icons";
+import { faDiscord, faInstagram, faFacebook, faYoutube, faGithub, faGit } from "@fortawesome/free-brands-svg-icons";
 import { faInbox } from "@fortawesome/free-solid-svg-icons";
 
 const Main = styled.div`
@@ -59,6 +59,10 @@ const ContactMe = () => {
                 <Item href="https://discordapp.com/users/738860824470356019">
                     <FontAwesomeIcon color="white" fontSize={25} icon={faDiscord} />
                     <Name>Dev{"{Gamer}"}</Name>
+                </Item>
+                <Item href="https://github.com/DevGamer9991">
+                    <FontAwesomeIcon color="white" fontSize={25} icon={faGithub} />
+                    <Name>DevGamer9991</Name>
                 </Item>
                 <Item href="https://www.instagram.com/pathornton114/">
                     <FontAwesomeIcon color="white" fontSize={25} icon={faInstagram} />

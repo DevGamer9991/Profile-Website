@@ -1,5 +1,7 @@
-import React from "react";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import React, { useRef, useState } from "react";
 import styled from "styled-components";
+import { faBars } from "@fortawesome/free-solid-svg-icons";
 
 const Main = styled.div`
     background-color: ${ window.screenTop >= 0 ? "transparent" : "red" };
@@ -36,6 +38,10 @@ const Title = styled.h1`
     width: fit-content;
     margin-left: 0px;
     font-size: 30px;
+
+    @media screen and (max-width: 450px) {
+        font-size: 24px;
+    }
 `;
 
 const ItemsWrapper = styled.div`
@@ -44,6 +50,10 @@ const ItemsWrapper = styled.div`
     justify-content: space-evenly;
     align-items: center;
     flex-direction: row;
+
+    @media screen and (max-width: 450px) {
+        display: none;
+    }
 `;
 
 const Item = styled.a`
@@ -62,9 +72,34 @@ const Item = styled.a`
     }
 `;
 
+const Hamburger = styled.div`
+    display: none;
+    @media screen and (max-width: 450px) {
+        display: flex;
+    }
+`;
+
+const HamburgerMenu = styled.div`
+    display: flex;
+    position: absolute;
+    background-color: rgba(0,0,0,0.4);
+    width: 100vw;
+    height: 100vh;
+    top: 80px;
+    bottom: 0;
+    left: 0;
+    right: 0;
+
+    transition: all 0.25s ease-in-out;
+
+    transform: ${props => props.navbarState ? "translateX(0%)" : "translateX(-100%)"};
+`;
+
 const Navbar = () => {
 
-    const MainRef = React.createRef();
+    const MainRef = useRef();
+
+    const [navbarOpen, setNavbarOpen] = useState(false);
 
     window.onscroll = () => {
         if (window.scrollY >= 100) {
@@ -74,15 +109,28 @@ const Navbar = () => {
         }
     }
 
+    const ToggleMenu = () => {
+        if (navbarOpen) {
+            setNavbarOpen(false)
+        } else {
+            setNavbarOpen(true)
+        }
+    }
+
     return (
         <Main ref={MainRef}>
             <Wrapper>
                 <Title>PARKER THORNTON</Title>
                 <ItemsWrapper>
                     <Item href="#home">HOME</Item>
+                    <Item href="#projects">PROJECTS</Item>
                     <Item href="#contact">CONTACT</Item>
                 </ItemsWrapper>
+                <Hamburger onClick={ToggleMenu}><FontAwesomeIcon color="white" fontSize={30} icon={faBars} /></Hamburger>
             </Wrapper>
+            <HamburgerMenu navbarState={navbarOpen}>
+                <h1>Hi</h1>
+            </HamburgerMenu>
         </Main>
     )
 }
