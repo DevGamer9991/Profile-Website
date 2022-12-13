@@ -2,7 +2,8 @@ import React, { useEffect, useState } from "react";
 import styled from "styled-components";
 
 const Main = styled.div`
-    height: 340px;
+    min-height: 340px;
+    padding-bottom: 25px;
     background-color: darkgray;
     width: 100%;
     color: white;
