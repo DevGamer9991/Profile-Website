@@ -32,7 +32,8 @@ const Name = styled.h2`
 const Item = styled.a`
     width: 230px;
     height: 60px;
-    background: rgba(73,204,60,1);
+    /* background: rgba(73,204,60,1); */
+    background: rgba(63,180,251,1);
     display: flex;
     flex-direction: row;
     justify-content: center;

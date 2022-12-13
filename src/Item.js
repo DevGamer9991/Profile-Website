@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import styled from "styled-components";
 
 const Main = styled.div`
@@ -36,19 +36,27 @@ const ImageWrapper = styled.div`
 const Title = styled.h2`
     word-wrap: normal;
     font-size: 50px;
+    text-align: left;
     color: ${ props => props.darkMode ? "white" : "black" };
-    width: 360px;
+    width: 370px;
 `;
 
 const Desc = styled.p`
     word-wrap: normal; 
+    font-size: 20px;
     color: ${ props => props.darkMode ? "white" : "black" };
-    width: 360px;
+    width: 370px;
 `;
 
 const Image = styled.img`
     height: 360px;
     filter: drop-shadow(0px 15px 15px rgba(0,0,0, 0.15));
+`;
+
+const TextImage = styled.h1`
+    font-size: ${ props => props.imageTextSize ? props.imageTextSize : "140px" };
+    text-align: left;
+    color: ${ props => props.darkMode ? "white" : "black" };
 `;
 
 const Item = (props) => {
@@ -60,7 +68,8 @@ const Item = (props) => {
                     <Desc darkMode={props.darkMode}>{props.desc}</Desc>
                 </TextWrapper>
                 <ImageWrapper>
-                    <Image src={props.image} />    
+                    {/* <Image src={props.image} />     */}
+                    <TextImage imageTextSize={props.imageTextSize} darkMode={props.darkMode}>{props.imageText}</TextImage>
                 </ImageWrapper>
             </MainWrapper>
         </Main>

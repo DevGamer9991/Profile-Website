@@ -3,7 +3,7 @@ import styled from "styled-components";
 
 const Main = styled.div`
     height: 340px;
-    background-color: teal;
+    background-color: darkgray;
     width: 100%;
     color: white;
     position: relative;
@@ -25,15 +25,26 @@ const ProjectsWrapper = styled.div`
     transform: translateX(-50%);
 `;
 
-const ProjectWrapper = styled.div`
+const ProjectWrapper = styled.a`
     width: 300px;
     height: 100px;
-    background-color: red;
+    border-radius: 5px;
+    background-color: lightblue;
+    text-decoration: none;
     margin: 5px;
+
+    transition: all 0.25s ease-in-out;
+    cursor: pointer;
+
+    :hover {
+        background: rgba(86,252,70,1);
+        transform: scale(1.025);
+    }
 `;
 
-const ProjectTitle = styled.a`
+const ProjectTitle = styled.h1`
     margin: 5px;
+    color: white;
 `;
 
 const Projects = (props) => {
@@ -76,8 +87,8 @@ const Projects = (props) => {
                 {data &&
                     data.map(({ id, name, html_url }) => {
                         return (
-                            <ProjectWrapper key={id}>
-                                <ProjectTitle href={html_url}>{name}</ProjectTitle>
+                            <ProjectWrapper key={id} href={html_url}>
+                                <ProjectTitle>{name}</ProjectTitle>
                             </ProjectWrapper>
                         )
                     })
