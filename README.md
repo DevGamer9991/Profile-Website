@@ -1,8 +1,24 @@
-# Profile-Website
+# Profile Website
 My website made in React
 
+## Steps to install
+
+Install Dependencies
+- [Docker](https://docs.docker.com/engine/install/)
+- [Docker Compose](https://docs.docker.com/compose/install/)
+
+Clone the repo
 ```
-docker-compose -d --build
+git clone https://github.com/DevGamer9991/Profile-Website.git
 ```
 
-https://mherman.org/blog/dockerizing-a-react-app/
+Build the container
+```
+docker-compose build
+```
+
+Run the container
+
+```
+docker-compose up -d
+```
