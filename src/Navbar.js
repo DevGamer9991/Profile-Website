@@ -4,7 +4,7 @@ import styled from "styled-components";
 import { faBars } from "@fortawesome/free-solid-svg-icons";
 
 const Main = styled.div`
-    background-color: ${ window.screenTop >= 0 ? "transparent" : "red" };
+    background-color: transparent;
     width: 100vw;
     height: 80px;
     display: flex;
