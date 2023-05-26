@@ -1,11 +1,11 @@
 import React from "react"
 import styled from "styled-components"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faDiscord, faInstagram, faFacebook, faYoutube, faGithub, faGit } from "@fortawesome/free-brands-svg-icons";
+import { faDiscord, faLinkedin, faTwitch, faTwitter, faInstagram, faFacebook, faYoutube, faGithub, faGit } from "@fortawesome/free-brands-svg-icons";
 import { faInbox } from "@fortawesome/free-solid-svg-icons";
 
 const Main = styled.div`
-    min-height: 300px;
+    min-height: 450px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -14,6 +14,11 @@ const Main = styled.div`
 
 const Title = styled.h1`
     height: 70px;
+`;
+
+const Tag = styled.h2`
+    margin-top: 10px;
+    margin-bottom: 10px;
 `;
 
 const Wrapper = styled.div`
@@ -56,30 +61,48 @@ const ContactMe = () => {
     return (
         <Main id="contact">
             <Title>Ways to Contact Me.</Title>
+            <Tag>Primary Contacts:</Tag>
             <Wrapper>
                 <Item href="https://discordapp.com/users/738860824470356019">
                     <FontAwesomeIcon color="white" fontSize={25} icon={faDiscord} />
-                    <Name>Dev{"{Gamer}"}</Name>
+                    <Name style={{ fontSize: "20px" }}>Dev{"{Gamer}"}</Name>
                 </Item>
+                <Item href="mailto: dgamer9991@gmail.com">
+                    <FontAwesomeIcon color="white" fontSize={25} icon={faInbox} />
+                    <Name style={{ fontSize: "13px" }}>dgamer9991@gmail.com</Name>
+                </Item>
+                <Item href="https://twitter.com/devgamer9991">
+                    <FontAwesomeIcon color="white" fontSize={25} icon={faTwitter} />
+                    <Name style={{ fontSize: "20px" }}>@DevGamer9991</Name>
+                </Item>
+            </Wrapper>
+            <Tag>Other Contacts:</Tag>
+            <Wrapper>
                 <Item href="https://github.com/DevGamer9991">
                     <FontAwesomeIcon color="white" fontSize={25} icon={faGithub} />
-                    <Name>DevGamer9991</Name>
+                    <Name style={{ fontSize: "20px" }}>DevGamer9991</Name>
                 </Item>
                 <Item href="https://www.instagram.com/pathornton114/">
                     <FontAwesomeIcon color="white" fontSize={25} icon={faInstagram} />
-                    <Name>Pathornton114</Name>
+                    <Name style={{ fontSize: "20px" }}>Pathornton114</Name>
                 </Item>
                 <Item href="https://www.facebook.com/pathornton114/">
                     <FontAwesomeIcon color="white" fontSize={25} icon={faFacebook} />
-                    <Name>Pathornton114</Name>
+                    <Name style={{ fontSize: "20px" }}>Pathornton114</Name>
                 </Item>
-                <Item href="https://www.youtube.com/channel/UCUnqPRAstzTqxvgUSks52aA">
+                <Item href="https://www.youtube.com/@pathornton114">
                     <FontAwesomeIcon color="white" fontSize={25} icon={faYoutube} />
-                    <Name>Dev{"{Gamer}"}</Name>
+                    <Name style={{fontSize: "20px"}}>Parker Thornton</Name>
                 </Item>
-                <Item href="mailto: pathornton114@gmail.com">
-                    <FontAwesomeIcon color="white" fontSize={25} icon={faInbox} />
-                    <Name style={{ fontSize: "14px" }}>pathornton114@gmail.com</Name>
+
+                <Item href="https://www.linkedin.com/in/parker-thornton114/">
+                    <FontAwesomeIcon color="white" fontSize={25} icon={faLinkedin} />
+                    <Name style={{ fontSize: "20px" }}>Parker Thornton</Name>
+                </Item>
+                
+                <Item href="https://www.twitch.tv/devgamer9991">
+                    <FontAwesomeIcon color="white" fontSize={25} icon={faTwitch} />
+                    <Name style={{ fontSize: "20px" }}>DevGamer9991</Name>
                 </Item>
             </Wrapper>
         </Main>
