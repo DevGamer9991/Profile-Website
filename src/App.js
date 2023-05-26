@@ -20,9 +20,7 @@ const ItemWrapper = styled.div`
 function App() {
 
   const [items, setItems] = useState([
-    { id: 1, cssId: "about-me", title: "About Me", desc: "Hi, My name is Parker Thornton. I am a self taught software developer and video editor based in Oklahoma, USA.", imageText: "</>" },
-    { id: 2, cssId: "video-editing", title: "Video Editing", desc: "Hi, My name is Parker Thornton. I am a self taught software developer and video editor based in Oklahoma, USA.", rightToLeft: true, background: "rgba(63,180,251,1)", darkMode: true, imageText: ":)" },
-    { id: 3, cssId: "new-item", title: "New Item", desc: "This is a new item added dynamically.", imageText: ":D" }
+    { key: 1, cssId: "about-me", title: "About Me", desc: "Hi, I'm Parker Thornton. Since the age of 8, I've been knee-deep in coding and I've spent the better part of my life as a dedicated software developer. For the last 4 years, I've branched out into video editing and production, finding unique ways to blend my tech skills with creative output. Just shy of 18, I'm excited for what the future holds. I'm all about exploring the cutting-edge of tech and creating digital experiences.", imageText: "</>" },
   ]);
 
   return (
@@ -31,7 +29,10 @@ function App() {
       <MainInfo />
       <ItemWrapper>
         {items.map((item) => (
-            <Item id={item.cssId} key={item.id} {...item} />
+            <>
+              {console.log(item.cssId)}
+              <Item itemID={item.cssId} key={item.key} {...item} />
+            </>
         ))}
         <Projects />
         <ContactMe />
