@@ -2,7 +2,7 @@ import React, { useEffect } from "react";
 import styled from "styled-components";
 
 const Main = styled.div`
-    height: 450px;
+    height: 500px;
     display: flex;
     overflow: hidden;
     background: ${ props => props.background ? props.background : "transparent" };
@@ -38,14 +38,14 @@ const Title = styled.h2`
     font-size: 50px;
     text-align: left;
     color: ${ props => props.darkMode ? "white" : "black" };
-    width: 370px;
+    width: 500px;
 `;
 
 const Desc = styled.p`
     word-wrap: normal; 
     font-size: 20px;
     color: ${ props => props.darkMode ? "white" : "black" };
-    width: 370px;
+    width: 500px;
 `;
 
 const Image = styled.img`
@@ -61,7 +61,7 @@ const TextImage = styled.h1`
 
 const Item = (props) => {
     return (
-        <Main background={props.background}>
+        <Main id={props.itemID} background={props.background}>
             <MainWrapper rightToLeft={props.rightToLeft}>
                 <TextWrapper>
                     <Title darkMode={props.darkMode}>{props.title}</Title>
