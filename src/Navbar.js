@@ -95,11 +95,13 @@ const HamburgerMenu = styled.div`
     transform: ${props => props.navbarState ? "translateX(0%)" : "translateX(-100%)"};
 `;
 
-const Navbar = () => {
+const Navbar = (props) => {
 
     const MainRef = useRef();
 
     const [navbarOpen, setNavbarOpen] = useState(false);
+
+    // for every item in the ItemsWrapper in the App.js file add a item into ItemsWrapper in this file.
 
     window.onscroll = () => {
         if (window.scrollY >= 100) {
@@ -118,11 +120,14 @@ const Navbar = () => {
     }
 
     return (
-        <Main ref={MainRef}>
+        <Main id={props.id} ref={MainRef}>
             <Wrapper>
                 <Title>PARKER THORNTON</Title>
                 <ItemsWrapper>
                     <Item href="#home">HOME</Item>
+                    {props.items.map((item) => (
+                    <Item href={"#" + item.cssId} key={item.id}>{item.title.toUpperCase()}</Item>
+                    ))}
                     <Item href="#projects">PROJECTS</Item>
                     <Item href="#contact">CONTACT</Item>
                 </ItemsWrapper>
