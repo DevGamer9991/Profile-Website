@@ -13,8 +13,9 @@ const Main = styled.div`
 
 const Title = styled.h1`
     height: 70px;
-    font-size: xx-large;
+    font-size: xxx-large;
     display: grid;
+    margin-bottom: 15px;
     place-items: center;
 `;
 
