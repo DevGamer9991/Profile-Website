@@ -2,9 +2,10 @@ import React, { useEffect, useState } from "react";
 import styled from "styled-components";
 
 const Main = styled.div`
-    min-height: 340px;
-    padding-bottom: 25px;
-    background-color: darkgray;
+    min-height: 375px;
+    padding-top: 25px;
+    padding-bottom: 50px;
+    background-color: #212121;
     width: 100%;
     color: white;
     position: relative;
@@ -12,7 +13,9 @@ const Main = styled.div`
 
 const Title = styled.h1`
     height: 70px;
+    font-size: xxx-large;
     display: grid;
+    margin-bottom: 15px;
     place-items: center;
 `;
 
@@ -30,9 +33,13 @@ const ProjectWrapper = styled.a`
     width: 300px;
     height: 100px;
     border-radius: 5px;
-    background-color: lightblue;
+    background-color: lightgrey;
     text-decoration: none;
     margin: 5px;
+
+    display: grid;
+
+    place-items: center;
 
     transition: all 0.25s ease-in-out;
     cursor: pointer;
@@ -45,7 +52,11 @@ const ProjectWrapper = styled.a`
 
 const ProjectTitle = styled.h1`
     margin: 5px;
-    color: white;
+    height: 50%;
+    color: black;
+    font-size: x-large;
+    display: grid;
+    place-items: center;
 `;
 
 const Projects = (props) => {
@@ -89,7 +100,7 @@ const Projects = (props) => {
                     data.map(({ id, name, html_url }) => {
                         return (
                             <ProjectWrapper key={id} href={html_url}>
-                                <ProjectTitle>{name}</ProjectTitle>
+                                <ProjectTitle>{name.replaceAll("-", " ")}</ProjectTitle>
                             </ProjectWrapper>
                         )
                     })
