@@ -61,12 +61,14 @@ const ProjectTitle = styled.h1`
 
 const Projects = (props) => {
 
+    const username = props.username;
+
     const [data, setData] = useState(null);
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState(null);
 
     useEffect(() => {
-        fetch(`https://api.github.com/users/DevGamer9991/repos`)
+        fetch(`https://api.github.com/users/${username}/repos`)
         .then((response) => {
             if (!response.ok) {
                 throw new Error(
@@ -98,6 +100,9 @@ const Projects = (props) => {
             <ProjectsWrapper>
                 {data &&
                     data.map(({ id, name, html_url }) => {
+
+                        if (name === username) return <></>;
+
                         return (
                             <ProjectWrapper key={id} href={html_url}>
                                 <ProjectTitle>{name.replaceAll("-", " ")}</ProjectTitle>
