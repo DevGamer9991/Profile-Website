@@ -34,7 +34,7 @@ function App() {
               <Item itemID={item.cssId} key={item.key} {...item} />
             </>
         ))}
-        <Projects />
+        <Projects username="DevGamer9991"/>
         <ContactMe />
         <Footer />
       </ItemWrapper>
