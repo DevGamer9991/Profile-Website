@@ -3,9 +3,13 @@ import styled from "styled-components";
 
 const Main = styled.div`
     min-height: 375px;
-    padding-top: 25px;
+    padding-top: 50px;
     padding-bottom: 50px;
     background-color: #212121;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
     width: 100%;
     color: white;
     position: relative;
@@ -15,18 +19,17 @@ const Title = styled.h1`
     height: 70px;
     font-size: xxx-large;
     display: grid;
-    margin-bottom: 15px;
+    margin-bottom: 10px;
     place-items: center;
 `;
 
 const ProjectsWrapper = styled.div`
     display: flex;
     flex-direction: row;
+    justify-content: center;
     flex-wrap: wrap;
     position: relative;
     max-width: 1000px;
-    left: 50%;
-    transform: translateX(-50%);
 `;
 
 const ProjectWrapper = styled.a`
