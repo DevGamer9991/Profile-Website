@@ -7,6 +7,10 @@ const Main = styled.div`
     overflow: hidden;
     background: ${ props => props.background ? props.background : "transparent" };
     justify-content: center;
+
+    @media screen and (max-width: 450px) {
+        flex-direction: column;
+    }
 `;
 
 const MainWrapper = styled.div`
@@ -14,6 +18,10 @@ const MainWrapper = styled.div`
     max-width: 1000px;
     display: flex;
     flex-direction: ${ props => props.rightToLeft ? "row-reverse" : "row"};
+
+    @media screen and (max-width: 450px) {
+        justify-content: center;
+    }
 `;
 
 const TextWrapper = styled.div`
@@ -22,6 +30,12 @@ const TextWrapper = styled.div`
     align-items: center;
     justify-content: center;
     flex-direction: column;
+
+    @media screen and (max-width: 450px) {
+        flex-direction: column;
+        width: 100%;
+        margin-inline: 30px;
+    }
 `;
 
 const ImageWrapper = styled.div`
@@ -31,6 +45,10 @@ const ImageWrapper = styled.div`
     position: relative;
     right: 0;
     top: 0;
+
+    @media screen and (max-width: 450px) {
+        display: none;
+    }
 `;
 
 const Title = styled.h2`
@@ -39,6 +57,14 @@ const Title = styled.h2`
     text-align: left;
     color: ${ props => props.darkMode ? "white" : "black" };
     width: 500px;
+
+    @media screen and (max-width: 450px) {
+        width: 100%;
+
+        text-align: center;
+
+        margin-bottom: 30px;
+    }
 `;
 
 const Desc = styled.p`
@@ -46,6 +72,11 @@ const Desc = styled.p`
     font-size: 20px;
     color: ${ props => props.darkMode ? "white" : "black" };
     width: 500px;
+
+    @media screen and (max-width: 450px) {
+        width: 100%;
+        padding-inline: 20px;
+    }
 `;
 
 const Image = styled.img`
