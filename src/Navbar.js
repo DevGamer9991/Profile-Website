@@ -125,8 +125,8 @@ const Navbar = (props) => {
                 <Title>PARKER THORNTON</Title>
                 <ItemsWrapper>
                     <Item href="#home">HOME</Item>
-                    {props.items.map((item) => (
-                    <Item href={"#" + item.cssId} key={item.id}>{item.title.toUpperCase()}</Item>
+                    {props.items.map((item, i) => (
+                    <Item href={"#" + item.cssId} key={i}>{item.title.toUpperCase()}</Item>
                     ))}
                     <Item href="#projects">PROJECTS</Item>
                     <Item href="#contact">CONTACT</Item>
