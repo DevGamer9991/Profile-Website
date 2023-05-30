@@ -10,20 +10,32 @@ const Main = styled.div`
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    padding-bottom: 30px;
+    padding-top: 30px;
 `;
 
 const Title = styled.h1`
     height: 70px;
+    font-size: xxx-large;
+
+    text-align: center;
+
+    @media screen and (max-width: 450px) {
+        font-size: 40px;
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
 `;
 
 const Tag = styled.h2`
-    margin-top: 10px;
-    margin-bottom: 10px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    font-size: 32px;
 `;
 
 const Wrapper = styled.div`
     display: flex;
-    justify-content: left;
+    justify-content: center;
     width: 100%;
     max-width: 1000px;
     flex-wrap: wrap;
@@ -31,6 +43,7 @@ const Wrapper = styled.div`
 
 const Name = styled.h2`
     margin-left: 10px;
+    font-size: 20px;
     color: white;
 `;
 
@@ -60,12 +73,12 @@ const Item = styled.a`
 const ContactMe = () => {
     return (
         <Main id="contact">
-            <Title>Ways to Contact Me.</Title>
+            <Title>Ways to Contact Me</Title>
             <Tag>Primary Contacts:</Tag>
             <Wrapper>
                 <Item href="https://discordapp.com/users/738860824470356019">
                     <FontAwesomeIcon color="white" fontSize={25} icon={faDiscord} />
-                    <Name style={{ fontSize: "20px" }}>Dev{"{Gamer}"}</Name>
+                    <Name>Dev{"{Gamer}"}</Name>
                 </Item>
                 <Item href="mailto: dgamer9991@gmail.com">
                     <FontAwesomeIcon color="white" fontSize={25} icon={faInbox} />
@@ -73,36 +86,36 @@ const ContactMe = () => {
                 </Item>
                 <Item href="https://twitter.com/devgamer9991">
                     <FontAwesomeIcon color="white" fontSize={25} icon={faTwitter} />
-                    <Name style={{ fontSize: "20px" }}>@DevGamer9991</Name>
+                    <Name>@DevGamer9991</Name>
                 </Item>
             </Wrapper>
             <Tag>Other Contacts:</Tag>
             <Wrapper>
                 <Item href="https://github.com/DevGamer9991">
                     <FontAwesomeIcon color="white" fontSize={25} icon={faGithub} />
-                    <Name style={{ fontSize: "20px" }}>DevGamer9991</Name>
+                    <Name>DevGamer9991</Name>
                 </Item>
                 <Item href="https://www.instagram.com/pathornton114/">
                     <FontAwesomeIcon color="white" fontSize={25} icon={faInstagram} />
-                    <Name style={{ fontSize: "20px" }}>Pathornton114</Name>
+                    <Name>Pathornton114</Name>
                 </Item>
                 <Item href="https://www.facebook.com/pathornton114/">
                     <FontAwesomeIcon color="white" fontSize={25} icon={faFacebook} />
-                    <Name style={{ fontSize: "20px" }}>Pathornton114</Name>
+                    <Name>Pathornton114</Name>
                 </Item>
                 <Item href="https://www.youtube.com/@pathornton114">
                     <FontAwesomeIcon color="white" fontSize={25} icon={faYoutube} />
-                    <Name style={{fontSize: "20px"}}>Parker Thornton</Name>
+                    <Name>Parker Thornton</Name>
                 </Item>
 
                 <Item href="https://www.linkedin.com/in/parker-thornton114/">
                     <FontAwesomeIcon color="white" fontSize={25} icon={faLinkedin} />
-                    <Name style={{ fontSize: "20px" }}>Parker Thornton</Name>
+                    <Name>Parker Thornton</Name>
                 </Item>
                 
                 <Item href="https://www.twitch.tv/devgamer9991">
                     <FontAwesomeIcon color="white" fontSize={25} icon={faTwitch} />
-                    <Name style={{ fontSize: "20px" }}>DevGamer9991</Name>
+                    <Name>DevGamer9991</Name>
                 </Item>
             </Wrapper>
         </Main>
