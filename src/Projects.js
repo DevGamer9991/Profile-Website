@@ -102,12 +102,12 @@ const Projects = (props) => {
             )}
             <ProjectsWrapper>
                 {data &&
-                    data.map(({ id, name, html_url }) => {
+                    data.map(({ id, name, html_url }, i) => {
 
                         if (name === username) return <></>;
 
                         return (
-                            <ProjectWrapper key={id} href={html_url}>
+                            <ProjectWrapper key={i} href={html_url}>
                                 <ProjectTitle>{name.replaceAll("-", " ")}</ProjectTitle>
                             </ProjectWrapper>
                         )
@@ -115,31 +115,31 @@ const Projects = (props) => {
                 }
             </ProjectsWrapper>
           {loading &&
-          <svg version="1.1" id="L4" style={{ position: "absolute", top: 0, width: "100%", height: 300 }} x="0px" y="0px" viewBox="0 0 100 100" enable-background="new 0 0 0 0">
-            <circle fill="#fff" stroke="none" cx="35%" cy="50" r="4">
-                <animate
-                attributeName="opacity"
-                dur="1s"
-                values="0;1;0"
-                repeatCount="indefinite"
-                begin="0.1"/>    
-            </circle>
-            <circle fill="#fff" stroke="none" cx="50%" cy="50" r="4">
-                <animate
-                attributeName="opacity"
-                dur="1s"
-                values="0;1;0"
-                repeatCount="indefinite" 
-                begin="0.2"/>       
-            </circle>
-            <circle fill="#fff" stroke="none" cx="65%" cy="50" r="4">
-                <animate
-                attributeName="opacity"
-                dur="1s"
-                values="0;1;0"
-                repeatCount="indefinite" 
-                begin="0.3"/>     
-            </circle>
+            <svg version="1.1" id="L4" style={{ position: "absolute", top: 0, width: "100%", height: 300 }} x="0px" y="0px" viewBox="0 0 100 100" enableBackground="new 0 0 0 0">
+                <circle fill="#fff" stroke="none" cx="35%" cy="50" r="4">
+                    <animate
+                    attributeName="opacity"
+                    dur="1s"
+                    values="0;1;0"
+                    repeatCount="indefinite"
+                    begin="0.1"/>    
+                </circle>
+                <circle fill="#fff" stroke="none" cx="50%" cy="50" r="4">
+                    <animate
+                    attributeName="opacity"
+                    dur="1s"
+                    values="0;1;0"
+                    repeatCount="indefinite" 
+                    begin="0.2"/>       
+                </circle>
+                <circle fill="#fff" stroke="none" cx="65%" cy="50" r="4">
+                    <animate
+                    attributeName="opacity"
+                    dur="1s"
+                    values="0;1;0"
+                    repeatCount="indefinite" 
+                    begin="0.3"/>     
+                </circle>
             </svg>
             }
         </Main>
