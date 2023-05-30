@@ -23,7 +23,7 @@ const Title = styled.h1`
     @media screen and (max-width: 450px) {
         font-size: 40px;
         margin-top: 10px;
-        margin-bottom: 10px;
+        /* margin-bottom: 10px; */
     }
 `;
 
@@ -31,6 +31,10 @@ const Tag = styled.h2`
     margin-top: 20px;
     margin-bottom: 20px;
     font-size: 32px;
+
+    @media screen and (max-width: 450px) {
+        margin-top: 10px;
+    }
 `;
 
 const Wrapper = styled.div`
