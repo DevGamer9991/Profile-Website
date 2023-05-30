@@ -8,10 +8,20 @@ const Main = styled.div`
     padding-inline: 100px;
     align-items: center;
     background: #2c2c35;
+
+    @media screen and (max-width: 450px) {
+        flex-direction: column;
+        justify-content: center;
+        padding-inline: 25px;
+    }
 `;
 
 const Title = styled.h2`
     color: white;
+
+    @media screen and (max-width: 450px) {
+        margin-bottom: 10px;
+    }
 `;
 
 const Copywrite = styled.h2`
