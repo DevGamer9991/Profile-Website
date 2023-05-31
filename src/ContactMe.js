@@ -18,12 +18,25 @@ const Title = styled.h1`
     height: 70px;
     font-size: xxx-large;
 
+    margin-bottom: 5px;
+
     text-align: center;
 
     @media screen and (max-width: 450px) {
         font-size: 40px;
         margin-top: 10px;
         /* margin-bottom: 10px; */
+    }
+`;
+
+const Message = styled.h4`
+    margin-inline: 30px;
+    text-align: center;
+
+    @media screen and (max-width: 450px) {
+        font-size: 18px;
+
+        margin-bottom: 15px;
     }
 `;
 
@@ -78,27 +91,28 @@ const ContactMe = () => {
     return (
         <Main id="contact">
             <Title>Ways to Contact Me</Title>
+            <Message>If you wish to contact me, please use the primary contacts as I may not respond to the others.</Message>
             <Tag>Primary Contacts:</Tag>
             <Wrapper>
                 <Item href="https://discordapp.com/users/738860824470356019">
                     <FontAwesomeIcon color="white" fontSize={25} icon={faDiscord} />
                     <Name>Dev{"{Gamer}"}</Name>
                 </Item>
-                <Item href="mailto: dgamer9991@gmail.com">
-                    <FontAwesomeIcon color="white" fontSize={25} icon={faInbox} />
-                    <Name style={{ fontSize: "13px" }}>dgamer9991@gmail.com</Name>
+                <Item href="https://github.com/DevGamer9991">
+                    <FontAwesomeIcon color="white" fontSize={25} icon={faGithub} />
+                    <Name>DevGamer9991</Name>
                 </Item>
                 <Item href="https://twitter.com/devgamer9991">
                     <FontAwesomeIcon color="white" fontSize={25} icon={faTwitter} />
                     <Name>@DevGamer9991</Name>
                 </Item>
+                <Item href="mailto: dgamer9991@gmail.com">
+                    <FontAwesomeIcon color="white" fontSize={25} icon={faInbox} />
+                    <Name style={{ fontSize: "13px" }}>dgamer9991@gmail.com</Name>
+                </Item>
             </Wrapper>
             <Tag>Other Contacts:</Tag>
             <Wrapper>
-                <Item href="https://github.com/DevGamer9991">
-                    <FontAwesomeIcon color="white" fontSize={25} icon={faGithub} />
-                    <Name>DevGamer9991</Name>
-                </Item>
                 <Item href="https://www.instagram.com/pathornton114/">
                     <FontAwesomeIcon color="white" fontSize={25} icon={faInstagram} />
                     <Name>Pathornton114</Name>
