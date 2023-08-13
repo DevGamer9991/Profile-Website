@@ -43,7 +43,7 @@ const ImageWrapper = styled.div`
     right: 0;
     display: grid;
     place-items: center;
-    >img {
+    &>img {
         width: calc(100vh * 0.6);
         /* transform: translateY(-5%);
         animation: floater 20s infinite;
