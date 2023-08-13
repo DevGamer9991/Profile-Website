@@ -67,7 +67,7 @@ const Item = styled.a`
 
     transition: all 0.25s ease-in-out;
 
-    :hover {
+    &:hover {
         color: lime;
     }
 `;
@@ -129,7 +129,7 @@ const Navbar = (props) => {
                     <Item href={"#" + item.cssId} key={i}>{item.title.toUpperCase()}</Item>
                     ))}
                     <Item href="#projects">PROJECTS</Item>
-                    <Item href="#contact">CONTACT</Item>
+                    <Item href="#contacts">CONTACTS</Item>
                 </ItemsWrapper>
                 <Hamburger onClick={ToggleMenu}><FontAwesomeIcon color="white" fontSize={30} icon={faBars} /></Hamburger>
             </Wrapper>
