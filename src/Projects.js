@@ -47,7 +47,7 @@ const ProjectWrapper = styled.a`
     transition: all 0.25s ease-in-out;
     cursor: pointer;
 
-    :hover {
+    &:hover {
         background: rgba(86,252,70,1);
         transform: scale(1.025);
     }
