@@ -1,7 +1,7 @@
 import React from "react"
 import styled from "styled-components"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faDiscord, faLinkedin, faTwitch, faTwitter, faInstagram, faFacebook, faYoutube, faGithub, faGit } from "@fortawesome/free-brands-svg-icons";
+import { faDiscord, faLinkedin, faTwitch, faInstagram, faFacebook, faYoutube, faGithub, faXTwitter } from "@fortawesome/free-brands-svg-icons";
 import { faInbox } from "@fortawesome/free-solid-svg-icons";
 
 const Main = styled.div`
@@ -81,7 +81,7 @@ const Item = styled.a`
     transition: all 0.25s ease-in-out;
     cursor: pointer;
 
-    :hover {
+    &:hover {
         background: rgba(86,252,70,1);
         transform: scale(1.025);
     }
@@ -89,7 +89,7 @@ const Item = styled.a`
 
 const ContactMe = () => {
     return (
-        <Main id="contact">
+        <Main id="contacts">
             <Title>Ways to Contact Me</Title>
             <Message>If you wish to contact me, please use the primary contacts as I may not respond to the others.</Message>
             <Tag>Primary Contacts:</Tag>
@@ -103,7 +103,7 @@ const ContactMe = () => {
                     <Name>DevGamer9991</Name>
                 </Item>
                 <Item href="https://twitter.com/devgamer9991">
-                    <FontAwesomeIcon color="white" fontSize={25} icon={faTwitter} />
+                <FontAwesomeIcon color="white" fontSize={25} icon={faXTwitter} />
                     <Name>@DevGamer9991</Name>
                 </Item>
                 <Item href="mailto: dgamer9991@gmail.com">
@@ -111,7 +111,7 @@ const ContactMe = () => {
                     <Name style={{ fontSize: "13px" }}>dgamer9991@gmail.com</Name>
                 </Item>
             </Wrapper>
-            <Tag>Other Contacts:</Tag>
+            <Tag>Other Contacts & Accounts:</Tag>
             <Wrapper>
                 <Item href="https://www.instagram.com/pathornton114/">
                     <FontAwesomeIcon color="white" fontSize={25} icon={faInstagram} />
