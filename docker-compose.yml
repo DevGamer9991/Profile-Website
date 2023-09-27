@@ -3,6 +3,7 @@ version: '3.7'
 services:
   profile-website:
     container_name: profile-website
+    restart: unless-stopped
     build:
       context: .
       dockerfile: Dockerfile
