@@ -102,7 +102,7 @@ const ContactMe = () => {
                     <FontAwesomeIcon color="white" fontSize={25} icon={faGithub} />
                     <Name>DevGamer9991</Name>
                 </Item>
-                <Item href="https://twitter.com/devgamer9991">
+                <Item href="https://twitter.com/dev_gamer9991">
                 <FontAwesomeIcon color="white" fontSize={25} icon={faXTwitter} />
                     <Name>@DevGamer9991</Name>
                 </Item>
@@ -113,15 +113,15 @@ const ContactMe = () => {
             </Wrapper>
             <Tag>Other Contacts & Accounts:</Tag>
             <Wrapper>
-                <Item href="https://www.instagram.com/pathornton114/">
+                <Item href="https://www.instagram.com/dev_gamer9991/">
                     <FontAwesomeIcon color="white" fontSize={25} icon={faInstagram} />
-                    <Name>Pathornton114</Name>
+                    <Name>dev_gamer9991</Name>
                 </Item>
-                <Item href="https://www.facebook.com/pathornton114/">
+                <Item href="https://www.facebook.com/devgamer9991/">
                     <FontAwesomeIcon color="white" fontSize={25} icon={faFacebook} />
-                    <Name>Pathornton114</Name>
+                    <Name>Parker Thornton</Name>
                 </Item>
-                <Item href="https://www.youtube.com/@pathornton114">
+                <Item href="https://www.youtube.com/@dev_gamer9991">
                     <FontAwesomeIcon color="white" fontSize={25} icon={faYoutube} />
                     <Name>Parker Thornton</Name>
                 </Item>
