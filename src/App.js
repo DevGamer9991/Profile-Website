@@ -26,7 +26,6 @@ function App() {
   return (
     <Main>
       <Navbar items={items}/>
-      <script async src="https://umami.devgamer.me/script.js" data-website-id="e8e768ac-4336-49b4-8a12-6702cacca4ea"></script>
       <MainInfo />
       <ItemWrapper>
         {items.map((item, i) => (
